@@ -1,0 +1,220 @@
+/* Import Roboto font from Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); */
+
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2; /* Light Gray - main body background */
+    color: #000000; /* Black - primary text color */
+
+    /* --- STICKY FOOTER STYLES START HERE --- */
+    display: flex; /* Make body a flex container */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+    /* --- STICKY FOOTER STYLES END HERE --- */
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: 'Roboto', sans-serif; /* Ensure headings also use Roboto */
+    color: #000000; /* Muted Greenish Gray - for headings */
+    text-align: center;
+}
+
+/* STICKY FOOTER - MAIN CONTENT GROW */
+.flex-grow-1 {
+    flex-grow: 1; /* Allows the main content area to expand and push the footer down */
+}
+
+/* NAVBAR STYLING */
+.navbar {
+    background-color: #EAE4D5 !important; /* Light Tan/Cream - Navbar background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    color: #000000 !important; /* Black - Logo text color */
+    font-weight: 700; /* Make brand text bold */
+    font-size: 1.5rem; /* Adjust brand text size */
+}
+
+.navbar-nav .nav-link {
+    color: #B6B09F !important; /* Muted Greenish Gray - Nav link color */
+    font-weight: 400;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #000000 !important; /* Black - Nav link hover/active color */
+}
+
+.navbar-toggler {
+    border-color: #B6B09F !important; /* Muted Greenish Gray - Toggler border */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28182, 176, 159, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; /* Change toggler icon color */
+}
+
+
+/* FOOTER STYLING */
+footer {
+    background-color: #EAE4D5; /* Light Tan/Cream - Footer background */
+    color: #000000; /* Black - Footer text color */
+    padding: 2rem 0; /* Add some vertical padding */
+    /* margin-top: 4rem; Removed, as flex-grow handles spacing */
+}
+
+footer h2 {
+    color: #000000; /* Muted Greenish Gray - Footer heading color */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+footer .form-control {
+    background-color: #F2F2F2; /* Light Gray - Input background */
+    border: 1px solid #B6B09F; /* Muted Greenish Gray - Input border */
+    color: #000000; /* Black - Input text color */
+}
+
+footer .form-control::placeholder {
+    color: #B6B09F; /* Muted Greenish Gray - Placeholder color */
+    opacity: 0.7; /* Make placeholder slightly transparent */
+}
+
+footer .btn {
+    background-color: #B6B09F; /* Muted Greenish Gray - Subscribe button background */
+    border-color: #B6B09F; /* Muted Greenish Gray - Subscribe button border */
+    color: #FFFFFF; /* White - Subscribe button text color */
+    font-weight: 700;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+footer .btn:hover {
+    background-color: #8E887C; /* A darker shade of Muted Greenish Gray for hover */
+    border-color: #8E887C;
+}
+
+footer p.text-center {
+    color: #020100; /* Muted Greenish Gray - Copyright text color */
+    font-size: 0.9rem;
+}
+
+/* Custom additions for layout and aesthetics */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Adjust margin for main content to avoid sticking to navbar */
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+/* General Link Color */
+a {
+    color: #B6B09F; /* Muted Greenish Gray - Default link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000; /* Black - Default link hover color */
+}
+
+/* Card Image Styling */
+.card-img-top {
+    width: 100%; /* Image takes full width of the card */
+    height: 500px; /* Set a fixed height for all card images (adjust as needed) */
+    object-fit: cover; /* Crop image to cover the area without distortion */
+    object-position: center; /* Center the image within the cropped area */
+}
+
+/* Optional: Add some styling for the card itself for better appearance */
+.card {
+    border: 1px solid #EAE4D5; /* Lighter border from your palette */
+    border-radius: 0.5rem; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+    background-color: #FFFFFF; /* White background for cards */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Card body text styling */
+.card-body {
+    color: #000000; /* Black text for card content */
+}
+
+.card-title {
+    color: #B6B09F; /* Muted Greenish Gray for card titles */
+    font-weight: 700;
+}
+
+.card-text {
+    color: #000000; /* Slightly softer black for paragraph text */
+}
+
+.card .btn {
+    background-color: #B6B09F; /* Subscribe button background */
+    border-color: #B6B09F; /* Subscribe button border */
+    color: #FFFFFF; /* White text */
+    font-weight: 600;
+}
+
+.card .btn:hover {
+    background-color: #8E887C; /* Darker shade on hover */
+    border-color: #8E887C;
+}
+.card-title{
+    color: #000000;
+}
+
+.img-fluid{
+    width: 200px; 
+    height: 200px;
+     object-fit: cover;
+    display: block;
+     margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+}
+.container{
+     padding-top: 30px;
+     padding-bottom: 30px;
+}
+.form-container {
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically (if container has height) */
+    /* You might also need a specific width for the form itself if it's not taking up enough space */
+    /* If you want the form to fill part of the container's width: */
+    /* width: 100%; */
+}
+
+/* The form itself might still need a max-width if you want it to not spread too wide */
+.form-container form {
+    width: 100%; /* Make form take available width inside flex container */
+    max-width: 800px; /* Limit max width of the form */
+    /* Add other styling for the form here */
+ /* Centers children horizontally */
+
+}
+.btn{
+      background-color: #B6B09F; /* Muted Greenish Gray - Subscribe button background */
+    border-color: #B6B09F; /* Muted Greenish Gray - Subscribe button border */
+    color: #FFFFFF; /* White - Subscribe button text color */
+    font-weight: 700;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+   margin-bottom: 10px;
+
+}
+.btn:hover {
+    background-color: #8E887C; /* A darker shade of Muted Greenish Gray for hover */
+    border-color: #8E887C;
+}

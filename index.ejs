@@ -1,0 +1,59 @@
+<%- include("partials/header.ejs") %>
+
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
+        <div class="container my-5">
+            <h1 class="text-center">Welcome to Books Corner</h1>
+            <p class="text-center">Your go-to place for book reviews, discussions, and all things literary!</p>
+
+            <% if (successMessage) { %>
+                <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                    <%= successMessage %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <% } %>
+            <% if (errorMessage) { %>
+                <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                    <%= errorMessage %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <% } %>
+
+            <h2 class="text-center mt-5 mb-4">Latest Reviews</h2>
+
+            <% if (posts.length === 0) { %>
+                <div class="text-center mt-5">
+                    <p class="lead">No blog is uploaded yet, go add new blog now!</p>
+                    <a href="/compose" class="btn btn-primary btn-lg mt-3">Create New Blog</a>
+                </div>
+            <% } else { %>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <% posts.forEach(function(post) { %>
+                        <div class="col">
+                            <div class="card h-100">
+                                <% if (post.image) { %>
+                                    <img src="<%= post.image %>" class="card-img-top" alt="<%= post.title %>">
+                                <% } %>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center"><%= post.title %></h5>
+                                    <!-- Display a truncated version of content on home page -->
+                                    <p class="card-text">
+                                        <%= post.content.substring(0, 150) %>...
+                                    </p>
+                                    <div class="text-center mt-3">
+                                        <a href="/posts/<%= post.id %>" class="btn btn-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+    </main>
+
+<%- include("partials/footer.ejs") %>
+
+
+
+

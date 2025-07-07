@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Create Your New Blog Post</h2>
+            <div class="form-container">
+                <form action="/compose" method="POST">
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Your Email address:</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postTitle" class="form-label">Enter Title of your blog:</label>
+                        <input type="text" class="form-control" id="postTitle" name="title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postContent" class="form-label">Write your Blog Here:</label>
+                        <textarea class="form-control" id="postContent" name="content" rows="10" required></textarea>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="postImage" class="form-label">Image URL (Optional):</label>
+                        <input type="url" class="form-control" id="postImage" name="image" placeholder="e.g., https://example.com/image.jpg">
+                    </div> -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Publish Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
