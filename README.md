@@ -40,11 +40,11 @@ Follow these steps to get the application up and running on your local machine:
 3.  **Start the server:**
     After the dependencies are installed, you can start the web server:
     ```bash
-    node app.js # Replace 'app.js' with your main server file name if different
+    node index.js # Replace 'index.js' with your main server file name if different
     ```
 4.  **Open in your browser:**
     Once the server is running, open your web browser and navigate to:
     ```
     http://localhost:3000
     ```
-    (Note: The port might be different if specified otherwise in your `app.js` file.)
+    (Note: The port might be different if specified otherwise in your `index.js` file.)
